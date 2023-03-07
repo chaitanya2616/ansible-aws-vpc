@@ -47,7 +47,7 @@
       ec2:
         key_name: vprofile-key
         region: '{{region}}'
-        vpc_id: '{{vpcid}}'
+        #vpc_id: '{{vpcid}}'
         vpc_subnet_id: "{{publicSubnet1}}"
         group_id: '{{BastionSG_out.group_id}}'
         instance_type: t2.micro
