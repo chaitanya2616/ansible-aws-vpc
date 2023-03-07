@@ -1,0 +1,12 @@
+region: us-east-2
+vpcid: vpc-007a858caaf1838c5
+publicSubnet1: subnet-0a42a5ceb2089f56f
+publicSubnet2: subnet-0ef4693555006609c
+publicSubnet3: subnet-072e9f33b38d77f7c
+privateSubnet1: subnet-09f8692f8bc5a0605
+privateSubnet2: subnet-0918e0ff60175f62e
+privateSubnet3: subnet-06750befb7939632b
+igwId: igw-02eac40a603b299d5
+NatGatewayId: nat-0f5f99ddb078e6b70
+PublicRTId: rtb-0f15f2b1ecb02d981
+PrivateRTId: rtb-0a2c67dcb3ae6bb2d
