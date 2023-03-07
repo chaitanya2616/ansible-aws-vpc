@@ -43,7 +43,7 @@
         var: BastionSG_out
 
 
-    - Creating Bastion Host
+    - Creating Bastion Host !!!
       ec2:
         key_name: vprofile-key
         group_id: '{{BastionSG_out.group_id}}'
