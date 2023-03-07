@@ -145,7 +145,7 @@
     - debug:
         var: natgw_out
 
-    - name: setup public subnet route table !!!
+    - name: setup private subnet route table !!!
       ec2_vpc_route_table:
         vpc_id: '{{vpcout.vpc.id}}'
         region: '{{region}}'
