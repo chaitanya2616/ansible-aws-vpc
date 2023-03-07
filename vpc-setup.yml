@@ -142,6 +142,9 @@
         if_exist_do_not_create: true
       register: natgw_out
 
+    - debug:
+        var: natgw_out
+
     - name: setup public subnet route table !!!
       ec2_vpc_route_table:
         vpc_id: '{{vpcout.vpc.id}}'
