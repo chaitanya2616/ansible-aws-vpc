@@ -13,7 +13,6 @@
         state: present
         update_cache: yes
         cache_valid_time: 86400
-
       loop:
         - mysql-server
         - mysql-client
@@ -56,10 +55,10 @@
       tags:
         - conf
 
- handlers:
-   - name: Restart mysql
-     service:
-       name: mysql
-       state: restarted
+  handlers:
+    - name: Restart mysql
+      service:
+        name: mysql
+        state: restarted
 
 
