@@ -61,9 +61,9 @@
         description: Allow port 22 from everywhere and all port within sg
         region: "{{region}}"
         vpc_id: "{{vpcid}}"
-        group_id: "{{vproStackSG_out.group_id}}"
         purge_rules: no
         rules:
           - proto: all
+            group_id: "{{vproStackSG_out.group_id}}"
 
 
