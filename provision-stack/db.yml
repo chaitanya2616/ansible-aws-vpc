@@ -53,9 +53,9 @@
         - conf
 
  handlers:
-   - name: restart mysql
+   - name: Restart mysql
      service:
-       name: mysql
-       state: restarted
+        name: mysql
+        state: restarted
 
 
