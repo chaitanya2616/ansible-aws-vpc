@@ -33,7 +33,7 @@
          - package
 
     - apt_repository:
-        deb: https://dl.bintray.com/rabbitmq/debian bionic main
+        repo: https://dl.bintray.com/rabbitmq/debian bionic main
         state: present
       tags:
       - package
