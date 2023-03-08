@@ -128,7 +128,7 @@
           rescue:
            - shell : cp -r old_ROOT ROOT
              args:
-               chdir: //usr/local/tomcat8/webapps/
+               chdir: /usr/local/tomcat8/webapps/
 
       rescue:
       - name: start tomcat8 svc
@@ -154,14 +154,17 @@
       template:
         src: templates/application.j2
         dest: /usr/local/tomcat8/webapps/ROOT/WEB-INF/classes/application.properties
+        force: yes
+      notify:
+        - Restart Tomcat
+      tags:
+        - deploy
 
-
-
-
-
-
-
-
+  handlers:
+    - name: Restart Tomcat
+      service:
+        name: tomcat8
+        state: restarted
 
 
 
