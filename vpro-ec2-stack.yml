@@ -174,7 +174,7 @@
     - debug:
         var: db01_out.tagged_instances[0].id
 
-    - local_action:
+    - name: adding load balancer !!!
       ec2_elb_lb:
         name: "vprofile-elb"
         region: "{{region}}"
