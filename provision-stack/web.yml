@@ -31,8 +31,8 @@
       temples:
         src: templates/nginxvpro.j2
         dest: /etc/nginx/sites-available/vproapp
-    tags:
-      - conf
+      tags:
+        - conf
 
     - name: Enable vproapp website
       file:
@@ -44,10 +44,10 @@
       tags:
         - conf
 
- handlers:
-   - name: Restart Nginx
-     service:
-       name: nginx
-       state: restarted
+  handlers:
+    - name: Restart Nginx
+      service:
+        name: nginx
+        state: restarted
 
 
