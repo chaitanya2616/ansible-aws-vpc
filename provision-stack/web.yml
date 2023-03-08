@@ -39,7 +39,7 @@
         src: /etc/nginx/sites-available/vproapp
         dest: /etc/nginx/sites-enabled/vproapp
         state: link
-      nofity:
+      notify:
         - Restart Nginx
       tags:
         - conf
