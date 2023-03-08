@@ -2,7 +2,11 @@
 - name: Setup Mysql with accounts db and remote login
   hosts: dbsrvgrp
   gather_facts: no
+  become: yes
   tasks:
+    - name: Import Mysql Variables
+      include_vars: groups_vars/dbsrvgrp
+
     - name: Installing Mysql service and dependencies
       package:
         name: "{{item}}"
@@ -54,6 +58,8 @@
 
  handlers:
    - name: Restart mysql
-     service: name=mysql state=restarted
+     service:
+       name: mysql
+       state: restarted
 
 
