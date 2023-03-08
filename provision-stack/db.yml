@@ -50,7 +50,7 @@
       notify:
         - Restart mysql
       tags:
-       - conf
+        - conf
 
  handlers:
    - name: restart mysql
