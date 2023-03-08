@@ -11,6 +11,3 @@ NatGatewayId: nat-02a702c08a683c48f
 PublicRTId: rtb-0f15f2b1ecb02d981
 PrivateRTId: rtb-0a2c67dcb3ae6bb2d
 BastionSGid:
-# BEGIN ANSIBLE MANAGED BLOCK
-BastionSGid: sg-0aa4670bb06d0b277
-# END ANSIBLE MANAGED BLOCK
