@@ -51,10 +51,10 @@
        write_priv: .*
        tags: administrator
        state: present
-    notify:
-       - Restart RMQ
-    tags:
-       - conf
+      notify:
+        - Restart RMQ
+      tags:
+        - conf
 
     - name: Enables the rabbitmq_management plugin
       rabbitmq_plugin:
