@@ -50,12 +50,10 @@
       notify:
         - Restart mysql
       tags:
-         conf
+        - conf
 
  handlers:
    - name: Restart mysql
-     service:
-        name: mysql
-        state: restarted
+     service: name=mysql state= restarted
 
 
