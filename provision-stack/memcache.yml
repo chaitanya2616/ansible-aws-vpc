@@ -15,7 +15,7 @@
     - name: start and Enable Memcache
       service:
         name: memcached
-        start: started
+        state: started
         enabled: yes
       tags:
        - svc
