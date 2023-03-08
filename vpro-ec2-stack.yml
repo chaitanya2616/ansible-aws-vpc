@@ -184,9 +184,9 @@
         purge_instance_ids: true
         security_group_ids: "{{ vproELBSG_out.group_id }}"
         subnets:
-          - "{{ pubsub1id }}"
-          - "{{ pubsub2id }}"
-          - "{{ pubsub3id }}"
+          - "{{ publicSubnet1 }}"
+          - "{{ publicSubnet2 }}"
+          - "{{ publicSubnet3 }}"
         listeners:
           - protocol: http # options are http, https, ssl, tcp
             load_balancer_port: 80
