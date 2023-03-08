@@ -66,10 +66,10 @@
         - package
 
   handlers:
-   - name:
-     service:
-       name: rabbitmq-server
-       state: restarted
+    - name:
+      service:
+        name: rabbitmq-server
+        state: restarted
 
 
 
