@@ -5,7 +5,7 @@
   tasks:
     - name: Install Erlang Repository Package
       apt:
-        deb: https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb
+        deb: https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
       tags:
         - package
 
@@ -32,17 +32,17 @@
       tags:
          - package
 
-    #- apt_repository:
-     #   repo: https://dl.bintray.com/rabbitmq/debian bionic main
-      #  state: present
-      #tags:
-      #-  package
+    - apt_repository:
+        repo: deb https://dl.bintray.com/rabbitmq/debian bionic main
+        state: present
+     tags:
+      -  package
 
-    - name: Install rabbitmq repository package
-      apt:
-       deb: https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.9.13/rabbitmq-server_3.9.13-1_all.deb
-      tags:
-       - package
+   # - name: Install rabbitmq repository package
+   #   apt:
+    #   deb: https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.9.13/rabbitmq-server_3.9.13-1_all.deb
+     # tags:
+      # - package
 
     - name: Install Rabbit MQ
       apt:
