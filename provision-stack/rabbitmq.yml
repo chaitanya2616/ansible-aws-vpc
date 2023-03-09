@@ -33,13 +33,13 @@
         - package
 
     - name: Install Erlang
-          apt:
-            name: erlang
-            update_cache: yes
+      apt:
+        name: erlang
+        update_cache: yes
                 #cache_valid_time: 86400
-            state: present
-            tags:
-              - package
+        state: present
+      tags:
+       - package
 
     - name: Install Rabbit MQ
       apt:
