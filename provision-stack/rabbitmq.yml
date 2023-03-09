@@ -16,14 +16,6 @@
       tags:
         - package
 
-    - name: Install Erlang
-      apt:
-        name: erlang
-        update_cache: yes
-        cache_valid_time: 86400
-        state: present
-      tags:
-        - package
 
     - name: Add an Apt signing key, uses whichever key is at the URL
       apt_key:
@@ -32,12 +24,22 @@
       tags:
         - package
 
+
     - apt_repository:
-        repo: deb https://dl.bintray.com/rabbitmq-erlang/debian focal erlang
-        repo: deb https://dl.bintray.com/rabbitmq/debian bionic main
+        repo: deb https://packages.erlang-solutions.com/ubuntu bionic contrib
+        #repo: deb https://dl.bintray.com/rabbitmq/debian bionic main
         state: present
       tags:
         - package
+
+    - name: Install Erlang
+          apt:
+            name: erlang
+            update_cache: yes
+                #cache_valid_time: 86400
+            state: present
+            tags:
+              - package
 
     - name: Install Rabbit MQ
       apt:
